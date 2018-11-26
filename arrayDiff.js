@@ -15,7 +15,7 @@ function array_diff(a, b) {
 
   for (let i = 0; i < a.length; i++){
       let curChar = a[i];
-      if (curChar !== b){
+      if (!b.includes(curChar)){
           returnArr.push(curChar);
       }
   }
