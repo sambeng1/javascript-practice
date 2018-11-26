@@ -15,12 +15,10 @@ Note: n, p will always be given as strictly positive integers.
 
 */
 
-
 function digPow(n, p){
-
   let totalPowers = 0;
   let numString = String(n);
-
+  
   for (let i = 0; i < numString.length; i++){
      let curNum = Number(numString[i]);
      let curPow = p;
@@ -28,14 +26,11 @@ function digPow(n, p){
      p++;
   }
   
-  for (let k = 0; k < n; k++){ 
-      let curNum = 1;
-      if (n*curNum === totalPowers){
-          return curNum;
-       }
-      if (k === n){
-      return -1;
-      }
-  curNum++
+  for (let k = 0; k <= n*2; k++){
+    if (n*k === totalPowers){
+    return k;
+    }
   }
+  
+  return -1
 }
