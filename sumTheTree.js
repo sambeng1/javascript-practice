@@ -12,7 +12,7 @@ Node:
 function sumTheTreeValues(root){
     let total = 0;
     for (let key in root){
-        if (key === 'value'){
+        if(key === 'value'){
             total += root[key];
         }
         if (typeof root[key] === 'object'){
