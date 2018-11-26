@@ -11,10 +11,10 @@ sortArray([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4]
 
 
 function sortArray(array) {
-
-    let finalArray = [];
-    let oddArray = []
-    let oddPushCount = 0;
+    
+  let finalArray = [];
+  let oddArray = []
+  let oddPushCount = 0;
     for (let i = 0; i < array.length; i++){
         let curChar = array[i];
         if (curChar % 2 === 1 && curChar ){
@@ -24,8 +24,8 @@ function sortArray(array) {
     
     oddArray.sort(function (a, b){
         return a - b;
-      });
-
+    });
+    
     for (let i = 0; i < array.length; i++){
         let curChar = array[i];
         if (curChar % 2 === 1){
@@ -35,6 +35,5 @@ function sortArray(array) {
         else {finalArray.push(curChar)};
     }
     
-    console.log(oddArray)
-    return finalArray;
-  }
+   return finalArray;
+}
